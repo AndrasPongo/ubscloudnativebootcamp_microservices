@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Release to Dev') {
             steps {
-        		echo "release to Dev"
+        		echo "release to dev"
             }
         }
         stage('Release to Staging') {
