@@ -25,13 +25,14 @@ public class ReporterController {
     }
 
     @GetMapping("/hellofriends")
-    public Flux helloFriends() {
+    public String helloFriends() {
+        String demoResult = "";
         WebClient webClient = WebClient.create("http://localhost:8091");
         Flux allFriends = webClient.get().uri("http://localhost:8091/friends").retrieve().bodyToFlux(Friend.class);
-        System.out.println("");
-
-        return allFriends;
+        Iterable<Friend> iter = allFriends.toIterable();
+        for (Friend f : iter) {
+            demoResult += String.format(template, f.getName()) + " ";
+        }
+        return demoResult;
     }
-
-
 }
