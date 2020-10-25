@@ -8,15 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="fetcherservice" />
         <module name="reporterservice" />
+        <module name="configserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="configserver" target="1.8" />
       <module name="fetcherservice" target="1.8" />
       <module name="reporterservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configserver" options="-parameters" />
       <module name="fetcherservice" options="-parameters" />
       <module name="reporterservice" options="-parameters" />
     </option>
