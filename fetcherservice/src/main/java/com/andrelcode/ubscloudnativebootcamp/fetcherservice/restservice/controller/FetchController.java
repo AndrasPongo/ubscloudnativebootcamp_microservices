@@ -3,6 +3,7 @@ package com.andrelcode.ubscloudnativebootcamp.fetcherservice.restservice.control
 import com.andrelcode.ubscloudnativebootcamp.fetcherservice.restservice.models.Friend;
 import com.andrelcode.ubscloudnativebootcamp.fetcherservice.restservice.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,9 @@ import java.util.List;
 
 @RestController
 public class FetchController {
+
+    @Value("${test.testparam}")
+    private String test;
 
     @Autowired
     FriendsRepository friendsRepository;
@@ -26,5 +30,9 @@ public class FetchController {
         return friendsRepository.findAll();
     }
 
+    @GetMapping("/test")
+    public String test() {
+        return test;
+    }
 }
 
