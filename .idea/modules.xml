@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/fetcherservice/fetcherservice.iml" filepath="$PROJECT_DIR$/fetcherservice/fetcherservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/reporterservice/reporterservice.iml" filepath="$PROJECT_DIR$/reporterservice/reporterservice.iml" />
     </modules>

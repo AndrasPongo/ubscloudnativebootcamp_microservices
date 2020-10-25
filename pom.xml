@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>configserver</module>
         <module>fetcherservice</module>
         <module>reporterservice</module>
     </modules>
